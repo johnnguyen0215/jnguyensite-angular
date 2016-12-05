@@ -1,0 +1,24 @@
+{
+  "name": "jnguyensite",
+  "version": "1.0.0",
+  "description": "John Nguyen's Personal Site",
+  "main": "ls",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/johnnguyen0215/personal-site-angular.git"
+  },
+  "author": "John Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnguyen0215/personal-site-angular/issues"
+  },
+  "homepage": "https://github.com/johnnguyen0215/personal-site-angular#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "method-override": "^2.3.7"
+  }
+}
