@@ -2,7 +2,7 @@ define( [
 	"../../core",
 	"../../selector"
 
-	// css is assumed
+	// stylesheets is assumed
 ], function( jQuery ) {
 	"use strict";
 

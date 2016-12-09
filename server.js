@@ -7,6 +7,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var sassMiddleware = require('node-sass-middleware');
 
 // Local port #
 var port = process.env.PORT || 9000;
@@ -18,6 +19,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Use methodOverride
 app.use(methodOverride('X-HTTP-Method-Override'));
+
+app.use(sassMiddleware({
+    src: __dirname + '/public/stylesheets/sass',
+    dest: __dirname + '/public/stylesheets',
+    prefix: '/stylesheets',
+    debug: true
+}));
 
 // Set static directory
 app.use(express.static(__dirname + '/public'));
