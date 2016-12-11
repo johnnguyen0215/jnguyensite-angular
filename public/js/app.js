@@ -4,7 +4,11 @@
 
 var app = angular.module('jnguyensite',
 	[
-		'ui.router', 'ui.bootstrap', 'MainController', 'ngAnimate'
+		'ui.router',
+		'ui.bootstrap',
+		'MainController',
+		'MainDirectives',
+		'ngAnimate'
 	]
 );
 
