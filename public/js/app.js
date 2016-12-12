@@ -8,7 +8,8 @@ var app = angular.module('jnguyensite',
 		'ui.bootstrap',
 		'MainController',
 		'MainDirectives',
-		'ngAnimate'
+		'ngAnimate',
+    'duScroll'
 	]
 );
 

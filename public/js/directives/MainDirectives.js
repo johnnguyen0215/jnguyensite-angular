@@ -10,21 +10,13 @@ mainDirectives.directive('heroItem', ['$timeout', function($timeout) {
     scope: {
       itemData: '='
     },
-    template: '<div style="{{itemData.style}}" ng-show="!itemData.delay" class="hero-item"><strong>{{itemData.name}}</strong></div>',
-    link: function(scope, elem, attrs) {
+    template: '<div style="{{itemData.style}}" ng-show="!itemData.delay" class="hero-item">' +
+                '<strong>{{itemData.name}}</strong>' +
+              '</div>',
+    link: function(scope) {
       $timeout(function() {
         scope.itemData.delay = false;
       }, scope.itemData.delay);
-    }
-  }
-}]);
-
-mainDirective.directive('scrollDown', ['$anchorScroll', '$location', function() {
-  return {
-    restrict: 'AE',
-    template: '<div class="scroll-down"></div>',
-    link: function(scope, elem, attrs) {
-
     }
   }
 }]);

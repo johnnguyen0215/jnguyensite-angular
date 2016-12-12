@@ -143,6 +143,30 @@ $breakMedium: 768;
   }
 }
 
+/************* CUSTOM KEY FRAMES ****************/
+@-webkit-keyframes scroll-down-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes scroll-down-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 #home {
   background: url('../../img/mountain1.jpg');
   height: 100vh;
@@ -159,4 +183,59 @@ $breakMedium: 768;
       @include fade-in(1s);
     }
   }
+
+  .scroll-down {
+    a {
+      padding-top: 80px;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      margin-left: -50px;
+      display: inline-block;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      color: #fff;
+      font-size: 20px;
+      font-family: "Lato", sans-serif;
+      text-decoration: none;
+      transition: opacity .3s;
+      span {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: scroll-down-animation 2s infinite;
+        animation: scroll-down-animation 2s infinite;
+        opacity: 0;
+        box-sizing: border-box;
+      }
+      span:nth-of-type(1) {
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+      }
+      span:nth-of-type(2) {
+        top: 16px;
+        -webkit-animation-delay: .15s;
+        animation-delay: .15s;
+      }
+      span:nth-of-type(3) {
+        top: 32px;
+        -webkit-animation-delay: .3s;
+        animation-delay: .3s;
+      }
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+}
+
+#about {
+  height: 100vh;
 }
