@@ -35,13 +35,16 @@ $breakMedium: 768;
 /************ CLASSES **************/
 
 
+
 .navbar {
   height: 70px;
   background-color: transparent;
-  -webkit-animation: slideInDown 1s;
-  -moz-animation: slideInDown 1s;
-  -o-animation: slideInDown 1s;
-
+  &.show-nav-bg {
+    -webkit-animation: slideInDown 1s;
+    -moz-animation: slideInDown 1s;
+    -o-animation: slideInDown 1s;
+    background-color: #2c3e50;
+  }
   .navbar-brand {
     display: block;
     margin-left: 30px;
@@ -143,6 +146,8 @@ $breakMedium: 768;
   }
 }
 
+
+
 /************* CUSTOM KEY FRAMES ****************/
 @-webkit-keyframes scroll-down-animation {
   0% {
@@ -167,7 +172,7 @@ $breakMedium: 768;
   }
 }
 
-#home {
+#homePage {
   background: url('../../img/mountain1.jpg');
   height: 100vh;
   background-attachment: fixed;
@@ -236,6 +241,6 @@ $breakMedium: 768;
   }
 }
 
-#about {
+#aboutPage {
   height: 100vh;
 }

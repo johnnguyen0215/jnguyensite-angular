@@ -13,14 +13,15 @@ var app = angular.module('jnguyensite',
 	]
 );
 
-app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $window) {
 	$urlRouterProvider.otherwise('home');
 
 	$stateProvider
 		.state('home', {
 			url: '/',
-			templateUrl: './views/home.html'
+			templateUrl: './views/main.html'
 		});
 
 	$locationProvider.html5Mode(true);
+
 });

@@ -2,10 +2,12 @@
 /************ CLASSES **************/
 .navbar {
   height: 70px;
-  background-color: transparent;
-  -webkit-animation: slideInDown 1s;
-  -moz-animation: slideInDown 1s;
-  -o-animation: slideInDown 1s; }
+  background-color: transparent; }
+  .navbar.show-nav-bg {
+    -webkit-animation: slideInDown 1s;
+    -moz-animation: slideInDown 1s;
+    -o-animation: slideInDown 1s;
+    background-color: #2c3e50; }
   .navbar .navbar-brand {
     display: block;
     margin-left: 30px;
@@ -112,16 +114,16 @@
   100% {
     opacity: 0; } }
 
-#home {
+#homePage {
   background: url("../../img/mountain1.jpg");
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
-  #home .hero {
+  #homePage .hero {
     padding-top: 300px; }
-    #home .hero .hero-item {
+    #homePage .hero .hero-item {
       font-size: 30px;
       font-family: "Raleway", sans-serif;
       color: white;
@@ -129,7 +131,7 @@
       -moz-animation: fadeIn 1s ease;
       -o-animation: fadeIn 1s ease;
       animation: fadeIn 1s ease; }
-  #home .scroll-down a {
+  #homePage .scroll-down a {
     padding-top: 80px;
     position: absolute;
     bottom: 10px;
@@ -143,7 +145,7 @@
     font-family: "Lato", sans-serif;
     text-decoration: none;
     transition: opacity .3s; }
-    #home .scroll-down a span {
+    #homePage .scroll-down a span {
       position: absolute;
       left: 50%;
       top: 0;
@@ -158,19 +160,19 @@
       animation: scroll-down-animation 2s infinite;
       opacity: 0;
       box-sizing: border-box; }
-    #home .scroll-down a span:nth-of-type(1) {
+    #homePage .scroll-down a span:nth-of-type(1) {
       -webkit-animation-delay: 0s;
       animation-delay: 0s; }
-    #home .scroll-down a span:nth-of-type(2) {
+    #homePage .scroll-down a span:nth-of-type(2) {
       top: 16px;
       -webkit-animation-delay: .15s;
       animation-delay: .15s; }
-    #home .scroll-down a span:nth-of-type(3) {
+    #homePage .scroll-down a span:nth-of-type(3) {
       top: 32px;
       -webkit-animation-delay: .3s;
       animation-delay: .3s; }
-    #home .scroll-down a:hover {
+    #homePage .scroll-down a:hover {
       opacity: .5; }
 
-#about {
+#aboutPage {
   height: 100vh; }
