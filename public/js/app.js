@@ -13,7 +13,7 @@ var app = angular.module('jnguyensite',
 	]
 );
 
-app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $window) {
+app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 	$urlRouterProvider.otherwise('home');
 
 	$stateProvider

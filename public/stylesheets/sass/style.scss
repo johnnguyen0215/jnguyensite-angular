@@ -146,7 +146,12 @@ $breakMedium: 768;
   }
 }
 
-
+.sectionHeader {
+  margin-top:70px;
+  font-family: "Lato", sans-serif;
+  font-size:80px;
+  color: #2c3e50;
+}
 
 /************* CUSTOM KEY FRAMES ****************/
 @-webkit-keyframes scroll-down-animation {
@@ -173,12 +178,12 @@ $breakMedium: 768;
 }
 
 #homePage {
-  background: url('../../img/mountain1.jpg');
-  height: 100vh;
+  background: url('../../img/backgrounds/mountain1.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
   .hero {
     padding-top: 300px;
     .hero-item {
@@ -242,5 +247,56 @@ $breakMedium: 768;
 }
 
 #aboutPage {
+  background: url('../../img/backgrounds/blur-background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
+  overflow-y: hidden;
+
+  .bio {
+    margin-top: 50px;
+    padding:20px;
+    background-color: #ecf0f1;
+    box-shadow: 10px 10px 5px #888888;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .hobbies {
+    margin-top: 50px;
+  }
+  .portrait {
+    float:left;
+    margin-top:30px;
+    background: url("../../img/me/selfie.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    border-radius:50%;
+    border: 2px solid #2c3e50;
+    display:block;
+    margin-left:10px;
+    margin-right:10px;
+  }
+  .me {
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .dumbbell {
+    background-color: #e74c3c;
+  }
+  .coding {
+    background-color: #3498db;
+  }
+  .gaming {
+    background-color: #f1c40f;
+  }
 }
