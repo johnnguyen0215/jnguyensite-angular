@@ -196,7 +196,7 @@
     font-size: 20px;
     font-weight: bold; }
   #aboutPage .hobbies {
-    margin-top: 50px; }
+    margin-top: 70px; }
   #aboutPage .portrait {
     float: left;
     margin-top: 30px;
@@ -224,3 +224,33 @@
     background-color: #3498db; }
   #aboutPage .gaming {
     background-color: #f1c40f; }
+
+#skillsPage {
+  background: url("../../img/backgrounds/hexagon-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; }
+  #skillsPage .google-drive {
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    line-height: 80px;
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 10px; }
+    #skillsPage .google-drive:hover {
+      background-color: #c0392b;
+      cursor: pointer; }
+    #skillsPage .google-drive:active {
+      background-color: #d91e18;
+      cursor: pointer; }
+    #skillsPage .google-drive img {
+      height: 50px;
+      width: 50px;
+      margin-bottom: -15px;
+      margin-right: 10px; }
+    #skillsPage .google-drive p {
+      margin-bottom: 40px; }
