@@ -34,7 +34,6 @@
       background-color: #fff; }
   @media only screen and (max-width: 767px) {
     .navbar .navbar-collapse {
-      background-color: #34495e;
       overflow-y: hidden; } }
 
 .nav-icon {
@@ -126,7 +125,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; }
+  min-height: 100vh; }
   #homePage .hero {
     padding-top: 300px; }
     #homePage .hero .hero-item {
@@ -185,7 +184,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: hidden; }
   #aboutPage .bio {
     margin-top: 50px;
@@ -196,7 +195,8 @@
     font-size: 20px;
     font-weight: bold; }
   #aboutPage .hobbies {
-    margin-top: 70px; }
+    margin-top: 70px;
+    margin-bottom: 50px; }
   #aboutPage .portrait {
     float: left;
     margin-top: 30px;
@@ -230,7 +230,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; }
+  min-height: 100vh; }
   #skillsPage .google-drive {
     color: #fff;
     background-color: #e74c3c;

@@ -4,20 +4,38 @@
 
 var mainDirectives = angular.module('MainDirectives', []);
 
-mainDirectives.directive('navBg', function($window, $animate) {
+mainDirectives.directive('navBg', ['$timeout', '$window', function($timeout, $window) {
   return {
+    scope: {
+      isCollapsed: '=navBg'
+    },
     restrict: 'A',
     link: function(scope, element) {
-      angular.element($window).bind('scroll', function() {
-        if (this.pageYOffset > 950) {
-          element.addClass('show-nav-bg');
-        } else {
-          element.removeClass('show-nav-bg');
-        }
-      });
+      $timeout(function() {
+        var collapsedNav = angular.element(document.getElementsByClassName('navbar-collapse'));
+        var aboutPage = document.querySelector('#aboutPage');
+        scope.$watch('isCollapsed', function(newValue, oldValue) {
+          if (!newValue && (aboutPage.getBoundingClientRect().top <= 0)){
+            collapsedNav.css('background-color', '#34495e');
+          }
+        }, true);
+
+        angular.element($window).bind('scroll', function() {
+          var aboutPageOffset = aboutPage.getBoundingClientRect().top;
+          if (aboutPageOffset <= 0) {
+            element.addClass('show-nav-bg');
+            if (!scope.isCollapsed) {
+              collapsedNav.css('background-color', '#34495e');
+            }
+          } else {
+            element.removeClass('show-nav-bg');
+            collapsedNav.css('background-color', 'transparent');
+          }
+        });
+      }, 0);
     }
   }
-});
+}]);
 
 mainDirectives.directive('heroItem', ['$timeout', function($timeout) {
   return {

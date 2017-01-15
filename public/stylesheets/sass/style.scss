@@ -83,7 +83,6 @@ $breakMedium: 768;
 
   .navbar-collapse {
     @media only screen and (max-width: ($breakMedium - 1) * 1px) {
-      background-color: #34495e;
       overflow-y: hidden;
     }
   }
@@ -183,7 +182,7 @@ $breakMedium: 768;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   .hero {
     padding-top: 300px;
     .hero-item {
@@ -251,7 +250,7 @@ $breakMedium: 768;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: hidden;
 
   .bio {
@@ -265,6 +264,7 @@ $breakMedium: 768;
   }
   .hobbies {
     margin-top: 70px;
+    margin-bottom: 50px;
   }
   .portrait {
     float:left;
@@ -306,7 +306,7 @@ $breakMedium: 768;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   .google-drive{
     color: #fff;
     background-color: #e74c3c;
